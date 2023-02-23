@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+
+import './fonts/DMSans/dm-sans-latin-400-normal.woff2';
+import './fonts/HafferXH/HafferXH-Medium.otf'
+import './fonts/HafferXH/HafferXH-Regular.otf'
+import './fonts/HafferXH/HafferXH-SemiBold.otf'
+import './fonts/SFMono/SFMonoMedium.otf'
+import './fonts/SFMono/SFMonoRegular.otf'
 
 function App() {
+
+  const theme = extendTheme({
+    fonts: {
+      body: "'DM Sans', -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
+      heading: "HafferXH, sans-serif",
+      mono: 'SFMonoRegular, Menlo, Monaco, Consolas,"Liberation Mono","Courier New", monospace',
+    },
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <ChakraProvider theme={theme}>
+        <div>
+          <h1>Pricing</h1>
+        </div>
+      </ChakraProvider>
+    </RecoilRoot>
   );
 }
 
