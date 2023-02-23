@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"),
+    url("./fonts/DMSans/dm-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HafferXH";
+  src: local("HafferXH"),
+    url("./fonts/HafferXH/HafferXH-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "HafferXH";
+  src: local("HafferXH"),
+    url("./fonts/HafferXH/HafferXH-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "HafferXH";
+  src: local("HafferXH"),
+    url("./fonts/HafferXH/HafferXH-SemiBold.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SFMonoMedium";
+  src: local("SFMonoMedium"),
+    url("./fonts/SFMono/SFMonoMedium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SFMonoRegular";
+  src: local("SFMonoRegular"),
+    url("./fonts/SFMono/SFMonoRegular.otf") format("opentype");
+  font-weight: 400;
 }
