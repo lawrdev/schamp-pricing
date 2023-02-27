@@ -37,3 +37,10 @@
     url("./fonts/SFMono/SFMonoRegular.otf") format("opentype");
   font-weight: 400;
 }
+
+body {
+  font-size: 18px !important;
+}
+a {
+  text-decoration: none !important;
+}
