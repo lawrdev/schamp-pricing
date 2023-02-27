@@ -11,6 +11,7 @@ function NavList() {
       marginInline={{ base: "2em", lg: "3em" }}
       justifyContent="space-evenly"
       alignContent="center"
+      listStyleType="none"
     >
       {options.map((option, index) => (
         <chakra.li
