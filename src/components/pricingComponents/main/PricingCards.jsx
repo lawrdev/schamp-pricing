@@ -10,7 +10,7 @@ function PricingCards() {
     <chakra.section
       data-aos="fade-up"
       px={{ base: 8, md: 24 }}
-      mt={{ base: 0, md: 16 * -1 }}
+      mt={{ base: 10, md: 16 * -1 }}
       mb={32}
     >
       <Grid

@@ -73,7 +73,8 @@ function CardItem({ item }) {
         <Button
           as="h4"
           variant="ghost"
-          height={{ md: "80px" }}
+          sx={{ padding: "20px 24px" }}
+          height={{ base: "56px", md: "80px" }}
           fontSize={{ md: "xl" }}
           fontFamily="heading"
           fontWeight="light"
