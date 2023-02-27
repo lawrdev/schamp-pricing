@@ -19,6 +19,11 @@ function NavList() {
           mr={{ md: 8 }}
           whiteSpace="nowrap"
           textAlign="center"
+          _hover={{ opacity: 0.5 }}
+          transitionProperty="common"
+          transitionDuration="fast"
+          transitionDelay="50ms"
+          transitionTimingFunction="ease-in-out"
         >
           {option}
         </chakra.li>
