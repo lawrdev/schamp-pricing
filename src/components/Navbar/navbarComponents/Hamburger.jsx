@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Box,
   Image,
@@ -6,16 +5,14 @@ import {
   Text,
   IconButton,
   CloseButton,
-  Portal,
+  Button,
   VStack,
   useDisclosure,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   Accordion,
 } from "@chakra-ui/react";
 import { ReactComponent as HamburgerSvg } from "../assets/hamburger.svg";
@@ -26,18 +23,16 @@ import UseCases from "./accordion/UseCases";
 
 function Hamburger() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const handleClick = (e) => {
+  const handleClick = () => {
     onOpen();
   };
   return (
     <>
       <IconButton
-        onClick={(e) => {
-          handleClick(e);
-        }}
+        display={{ base: "flex", xl: "none" }}
+        onClick={handleClick}
         width="fit-content"
         height={30}
-        display="flex"
         justifyContent="center"
         icon={<HamburgerSvg width={20} height={20} />}
         colorScheme={{ color: "#000" }}
@@ -57,7 +52,7 @@ function Hamburger() {
                   maxWidth="100%"
                   height="auto"
                 />
-                <CloseButton size="lg" ml="auto" />
+                <CloseButton size="lg" ml="auto" onClick={onClose} />
               </Box>
             </DrawerHeader>
 
@@ -82,10 +77,46 @@ function Hamburger() {
                   py={6}
                   px={5}
                   borderBottomWidth="1px"
+                  _hover={{ bg: "black.50" }}
                 >
                   PRICING
                 </Text>
               </Link>
+
+              <VStack px={5} pt={1} mb={5} mt="auto" spacing={3}>
+                <Link width="100%">
+                  <Button
+                    variant="outline"
+                    width="100%"
+                    py={7}
+                    paddingInline="24px"
+                    fontWeight="semibold"
+                    fontSize="sm"
+                    borderRadius="8px"
+                    borderColor="currentcolor"
+                    bg="transparent"
+                    color="black.600"
+                    _hover={{ bg: "black.50" }}
+                  >
+                    Login
+                  </Button>
+                </Link>
+
+                <Link width="100%">
+                  <Button
+                    colorScheme="primary"
+                    variant="solid"
+                    width="100%"
+                    py={7}
+                    paddingInline="24px"
+                    fontWeight="semibold"
+                    fontSize="sm"
+                    borderRadius="8px"
+                  >
+                    Get Started
+                  </Button>
+                </Link>
+              </VStack>
             </DrawerBody>
           </Box>
         </DrawerContent>
